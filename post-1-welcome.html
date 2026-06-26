@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why I'm Writing This Down — In the Margins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="page-edge"></div>
+
+<header class="site-header">
+  <a href="../index.html" class="wordmark">In the Margins</a>
+  <nav class="main-nav">
+    <a href="../index.html#shelves">Shelves</a>
+    <a href="../bookshelf.html">Book Exchange</a>
+    <a href="../guestbook.html">Guestbook</a>
+    <a href="../about.html">About</a>
+  </nav>
+</header>
+
+<main class="post-page">
+  <a href="../index.html#shelves" class="post-back">← Back to all entries</a>
+
+  <div class="post-page-meta">
+    <span class="margin-tag tag-classroom">classroom</span>
+    <span class="margin-date">June 2026</span>
+  </div>
+
+  <h1>Why I'm Writing This Down</h1>
+
+  <div class="post-content">
+    <p>I've kept a notebook on my desk for ten years. Not a planner — a real notebook, the kind with a soft cover that gets a coffee ring on it by October. In it I write down the things that happen in my classroom that I know I'll forget if I don't: the question a student asked that I couldn't answer well enough, the lesson that fell completely flat, the sentence from a novel that suddenly made a grammar point click for an entire room of teenagers.</p>
+
+    <p>I never meant for anyone else to read it. But a few months ago I went back through old pages looking for something specific, and I realized I'd written down ten years of a teaching life without ever stepping back to see the shape of it. So this is me stepping back.</p>
+
+    <blockquote class="margin-quote">"The lessons worth keeping are the ones you write down before you forget them."</blockquote>
+
+    <h2>What you'll find here</h2>
+
+    <p>This notebook has three shelves, and I'll keep adding to all three:</p>
+
+    <ul>
+      <li><strong>Books</strong> — not formal reviews, just honest reactions to what I'm reading and, more often than not, what it has to do with teaching, even when it has nothing to do with teaching.</li>
+      <li><strong>Classroom</strong> — what actually happens in an English classroom in Uzbekistan. The good days and the days that don't go to plan.</li>
+      <li><strong>Journey</strong> — the academic path that got me here, and the parts of becoming a teacher that nobody tells you about until you're already in it.</li>
+    </ul>
+
+    <p>I don't have this all figured out. Most days I'm still learning as much as my students are. But I think there's something worth sharing in the in-between — the margins, where the real notes usually are.</p>
+
+    <p>If that sounds like your kind of reading, I'm glad you're here. Subscribe below and I'll send new entries when I have something worth saying.</p>
+  </div>
+
+  <div class="post-footer-note">
+    Written by Gulnoza Rajabova, English teacher.
+  </div>
+  <div class="share-bar">
+    <span class="share-label">Share this post</span>
+    <button class="share-btn share-copy" onclick="copyPostLink(this)">Copy link</button>
+    <a class="share-btn share-whatsapp" id="whatsapp-share" target="_blank" rel="noopener">Share to WhatsApp</a>
+    <span class="share-btn share-instagram" onclick="copyForInstagram(this)" style="cursor:pointer;">Copy caption for Instagram</span>
+  </div>
+
+  <div class="comments-section">
+    <h2 class="comments-heading">Leave a comment</h2>
+    <div id="giscus-comments"></div>
+    <script src="https://giscus.app/client.js"
+      data-repo="REPLACE-WITH-username/repo"
+      data-repo-id="REPLACE-WITH-repo-id"
+      data-category="General"
+      data-category-id="REPLACE-WITH-category-id"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const url = window.location.href;
+      const title = document.title;
+      document.getElementById('whatsapp-share').href = 'https://wa.me/?text=' + encodeURIComponent(title + ' — ' + url);
+    });
+
+    function copyPostLink(btn) {
+      navigator.clipboard.writeText(window.location.href).then(function() {
+        const original = btn.textContent;
+        btn.textContent = 'Link copied!';
+        setTimeout(function() { btn.textContent = original; }, 2000);
+      });
+    }
+
+    function copyForInstagram(el) {
+      const caption = document.title.replace(' — In the Margins', '') + '\n\nRead the full post — link in bio. 🩷';
+      navigator.clipboard.writeText(caption).then(function() {
+        const original = el.textContent;
+        el.textContent = 'Caption copied!';
+        setTimeout(function() { el.textContent = original; }, 2000);
+      });
+    }
+  </script>
+</main>
+
+<footer class="site-footer">
+  <p>In the Margins — written by Gulnoza Rajabova.</p>
+  <p class="footer-social">
+    <a href="https://www.instagram.com/gulnoza_rajabova31/" target="_blank" rel="noopener">Instagram</a>
+    <span class="social-dot">·</span>
+    <a href="https://www.couchsurfing.com/c/users/gulnoza-rajabova" target="_blank" rel="noopener">Couchsurfing</a>
+    <span class="social-dot">·</span>
+    <a href="https://www.linkedin.com/in/gulnoza-rajabova-429baa215" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+</footer>
+
+</body>
+</html>
