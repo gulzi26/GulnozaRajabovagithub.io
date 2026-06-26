@@ -845,3 +845,20 @@ blockquote.margin-quote {
     font-size: 14px;
   }
 }
+
+/* Posts/feed styles */
+.post-creator { max-width: var(--wide-width); margin: 30px auto; padding: 0 20px; }
+.post-form { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.post-form input, .post-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid var(--rule); border-radius: 6px; }
+.post-form .file-label { display:block; margin-bottom:6px; color:var(--ink-soft); }
+.post-form button { background: var(--pink); color: white; border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; }
+.posts-feed { max-width: var(--wide-width); margin: 40px auto; padding: 0 20px; }
+.user-post { background: white; padding: 18px; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); margin-bottom: 18px; }
+.user-post .post-meta { color:var(--ink-soft); margin-bottom:8px; }
+.post-img { max-width: 220px; margin-right:8px; border-radius:8px; display:inline-block; }
+.post-video { max-width: 420px; display:block; margin:8px 0; }
+
+@media (max-width:640px){
+  .post-img { max-width: 100%; display:block; margin-bottom:10px; }
+  .post-video { max-width:100%; }
+}

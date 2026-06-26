@@ -44,13 +44,31 @@
   <div class="book-categories">
     <h2>Browse by category</h2>
     <div class="category-buttons">
-      <button class="book-category-btn" data-book-category="all">All Books</button>
-      <button class="book-category-btn" data-book-category="fiction">📖 Fiction</button>
-      <button class="book-category-btn" data-book-category="education">🎓 Education</button>
-      <button class="book-category-btn" data-book-category="memoir">🌟 Memoir</button>
-      <button class="book-category-btn" data-book-category="selfhelp">💡 Self-Help</button>
+      <a href="bookshelf.html" class="book-category-btn" data-book-category="all">All Books</a>
+      <a href="book-fiction.html" class="book-category-btn" data-book-category="fiction">📖 Fiction</a>
+      <a href="book-education.html" class="book-category-btn" data-book-category="education">🎓 Education</a>
+      <a href="book-memoir.html" class="book-category-btn" data-book-category="memoir">🌟 Memoir</a>
+      <a href="book-selfhelp.html" class="book-category-btn" data-book-category="selfhelp">💡 Self-Help</a>
     </div>
   </div>
+
+  <section class="post-creator">
+    <h2>Share a story</h2>
+    <p>Write a short post about a book, a classroom moment, or anything you'd like to share — add photos or short videos.</p>
+    <form id="post-form" class="post-form">
+      <input type="text" id="post-author" placeholder="Your name" required>
+      <input type="text" id="post-title" placeholder="Post title" required>
+      <textarea id="post-content" placeholder="Write your story..." required></textarea>
+      <label class="file-label">Attach photos or video (max 3 files, 3MB each):</label>
+      <input type="file" id="post-files" accept="image/*,video/*" multiple>
+      <button type="submit" class="btn-primary">Post</button>
+    </form>
+  </section>
+
+  <section class="posts-feed" id="posts-feed">
+    <h2>Community posts</h2>
+    <div id="posts-list"></div>
+  </section>
 
   <div class="book-grid" id="book-grid">
 
@@ -107,35 +125,7 @@
   </p>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const categoryBtns = document.querySelectorAll('.book-category-btn');
-  const bookCards = document.querySelectorAll('.book-card');
-
-  categoryBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const category = btn.getAttribute('data-book-category');
-
-      // Update active button
-      categoryBtns.forEach(function (b) {
-        b.classList.remove('active');
-      });
-      btn.classList.add('active');
-
-      // Show/hide books
-      bookCards.forEach(function (card) {
-        if (category === 'all' || card.getAttribute('data-book-category') === category) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // Set "All" as active by default
-  categoryBtns[0].classList.add('active');
-});
-</script>
+</body>
+</html>
 </body>
 </html>
