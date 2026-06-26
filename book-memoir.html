@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educated — Book Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.book-detail-page { padding: 40px 20px; }
+.book-detail-header { max-width: 800px; margin: 0 auto 40px; }
+.book-detail-image { width: 100%; max-width: 400px; height: 300px; background: #f0f0f0; border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
+.book-detail-meta { display: flex; gap: 20px; margin: 20px 0; font-size: 14px; color: #666; }
+.book-detail-body { max-width: 800px; margin: 0 auto; }
+.comments-section { max-width: 800px; margin: 60px auto 0; padding-top: 40px; border-top: 1px solid #e0e0e0; }
+.comments-section h3 { margin-bottom: 30px; }
+.comment-form { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+.comment-form input, .comment-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+.comment-form textarea { resize: vertical; min-height: 100px; }
+.comment-form button { background: #333; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+.comment-form button:hover { background: #555; }
+.comment { margin-bottom: 25px; padding: 15px; background: white; border-left: 3px solid #e83e8c; }
+.comment-author { font-weight: 600; margin-bottom: 5px; }
+.comment-date { font-size: 12px; color: #999; margin-bottom: 10px; }
+.comment-text { line-height: 1.6; }
+.back-link { display: inline-block; margin-bottom: 20px; color: #007bff; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="page-edge"></div>
+
+<header class="site-header">
+  <a href="index.html" class="wordmark">In the Margins</a>
+  <nav class="main-nav">
+    <a href="index.html#shelves">Shelves</a>
+    <a href="bookshelf.html">Book Exchange</a>
+    <a href="guestbook.html">Guestbook</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main class="book-detail-page">
+
+  <a href="bookshelf.html" class="back-link">← Back to Book Exchange</a>
+
+  <div class="book-detail-header">
+    <div class="book-detail-image">
+      <img src="https://via.placeholder.com/300x400" alt="Educated book cover">
+    </div>
+    
+    <h1>Educated</h1>
+    <p class="book-author">by Tara Westover</p>
+    
+    <div class="book-detail-meta">
+      <span>📘 Status: Finished — Happy to discuss</span>
+      <span>🔖 Read it twice</span>
+    </div>
+
+    <p><strong>About this book:</strong> A memoir about growing up in a survivalist family in Idaho and the transformative power of education. Westover's journey from homeschooled isolation to university is both harrowing and inspiring.</p>
+  </div>
+
+  <div class="book-detail-body">
+    <h3>Why this book matters to me as a teacher</h3>
+    <p>A memoir about education as transformation — read it twice, once for the story and once thinking about my own students' relationship to school. The first time I got swept up in Tara's harrowing childhood and her escape through education. The second time, I kept thinking about what education actually means to people in difficult circumstances, and how powerful it can be.</p>
+
+    <p>As a teacher, this book is a powerful reminder of the role we play in our students' lives. For some of them, school isn't just about academics — it's their gateway to a different future. The way Westover describes the power of learning, of being taught to think critically, of having your mind opened — that's what I'm trying to do in my classroom every day.</p>
+
+    <h3>What stood out to me</h3>
+    <ul>
+      <li>The profound impact of education on identity and agency</li>
+      <li>How family systems can both enable and prevent growth</li>
+      <li>The courage required to question everything you've been taught</li>
+      <li>The isolation of ignorance versus the freedom of knowledge</li>
+    </ul>
+
+    <h3>Perfect for</h3>
+    <ul>
+      <li>Educators interested in the transformative power of learning</li>
+      <li>Readers interested in memoir and personal growth</li>
+      <li>Those thinking about identity and family systems</li>
+      <li>Anyone who loves a page-turner that also makes you think</li>
+    </ul>
+  </div>
+
+  <section class="comments-section">
+    <h3>💬 Discussion</h3>
+    
+    <!-- Giscus Comments -->
+    <script src="https://giscus.app/client.js"
+            data-repo="gulzi26/GulnozaRajabovagithub.io"
+            data-repo-id="REPLACE_WITH_YOUR_REPO_ID"
+            data-category="Book-Discussions"
+            data-category-id="REPLACE_WITH_YOUR_CATEGORY_ID"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>In the Margins — written by Gulnoza Rajabova.</p>
+</footer>
+
+</body>
+</html>

@@ -757,3 +757,91 @@ blockquote.margin-quote {
   font-size: 14.5px;
   color: var(--ink-soft);
 }
+
+/* ============================================
+   BOOK EXCHANGE — Category Section
+   ============================================ */
+
+.bookshelf-hero {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: var(--wide-width);
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bookshelf-hero-text {
+  flex: 1;
+}
+
+.book-categories {
+  max-width: var(--wide-width);
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.book-categories h2 {
+  font-family: var(--font-display);
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.book-category-btn {
+  background: white;
+  border: 2px solid var(--rule);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.book-category-btn:hover {
+  border-color: var(--ink);
+  background: var(--paper-shade);
+}
+
+.book-category-btn.active {
+  background: var(--pink);
+  color: white;
+  border-color: var(--pink);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .bookshelf-hero {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .category-buttons {
+    gap: 8px;
+  }
+
+  .book-category-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

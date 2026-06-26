@@ -26,9 +26,14 @@
 
 <main class="bookshelf-page">
 
-  <p class="hero-eyebrow">book exchange</p>
-  <h1 class="bookshelf-title">Books worth passing on</h1>
-  <p class="bookshelf-sub">Every book here is one I've actually read. Some I'm happy to lend, some I'm hunting for a copy of, and some I'd just love to talk about with someone else who's read them. If any of this overlaps with your shelf, get in touch.</p>
+  <div class="bookshelf-hero">
+    <img src="https://via.placeholder.com/150" alt="Gulnoza Rajabova" class="profile-pic">
+    <div class="bookshelf-hero-text">
+      <p class="hero-eyebrow">book exchange</p>
+      <h1 class="bookshelf-title">Books worth passing on</h1>
+      <p class="bookshelf-sub">Every book here is one I've actually read. Some I'm happy to lend, some I'm hunting for a copy of, and some I'd just love to talk about with someone else who's read them. If any of this overlaps with your shelf, get in touch.</p>
+    </div>
+  </div>
 
   <div class="book-status-key">
     <span class="status-pill status-lend">📗 Up for lending</span>
@@ -36,34 +41,49 @@
     <span class="status-pill status-read">📘 Finished — happy to discuss</span>
   </div>
 
-  <div class="book-grid">
+  <div class="book-categories">
+    <h2>Browse by category</h2>
+    <div class="category-buttons">
+      <button class="book-category-btn" data-book-category="all">All Books</button>
+      <button class="book-category-btn" data-book-category="fiction">📖 Fiction</button>
+      <button class="book-category-btn" data-book-category="education">🎓 Education</button>
+      <button class="book-category-btn" data-book-category="memoir">🌟 Memoir</button>
+      <button class="book-category-btn" data-book-category="selfhelp">💡 Self-Help</button>
+    </div>
+  </div>
 
-    <article class="book-card">
+  <div class="book-grid" id="book-grid">
+
+    <article class="book-card" data-book-category="fiction">
       <span class="status-pill status-read">📘 finished</span>
       <h3>The Reader</h3>
       <p class="book-author">Bernhard Schlink</p>
       <p class="book-note">Read this during my MA and couldn't stop thinking about how it handles guilt and silence. Would genuinely love to discuss the ending with someone.</p>
+      <a href="book-fiction.html" class="read-more">View details & comments →</a>
     </article>
 
-    <article class="book-card">
+    <article class="book-card" data-book-category="selfhelp">
       <span class="status-pill status-lend">📗 lending</span>
       <h3>Atomic Habits</h3>
       <p class="book-author">James Clear</p>
       <p class="book-note">Borrowed this from a colleague originally and now it's mine to pass along. Practical enough that I actually use it in how I plan lessons.</p>
+      <a href="book-selfhelp.html" class="read-more">View details & comments →</a>
     </article>
 
-    <article class="book-card">
+    <article class="book-card" data-book-category="education">
       <span class="status-pill status-want">📙 looking for</span>
       <h3>Pedagogy of the Oppressed</h3>
       <p class="book-author">Paulo Freire</p>
       <p class="book-note">Came up constantly in my Education and Innovation coursework and I never got my own copy. If you have one to lend or swap, I'm interested.</p>
+      <a href="book-education.html" class="read-more">View details & comments →</a>
     </article>
 
-    <article class="book-card">
+    <article class="book-card" data-book-category="memoir">
       <span class="status-pill status-read">📘 finished</span>
       <h3>Educated</h3>
       <p class="book-author">Tara Westover</p>
       <p class="book-note">A memoir about education as transformation — read it twice, once for the story and once thinking about my own students' relationship to school.</p>
+      <a href="book-memoir.html" class="read-more">View details & comments →</a>
     </article>
 
   </div>
@@ -87,5 +107,35 @@
   </p>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const categoryBtns = document.querySelectorAll('.book-category-btn');
+  const bookCards = document.querySelectorAll('.book-card');
+
+  categoryBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const category = btn.getAttribute('data-book-category');
+
+      // Update active button
+      categoryBtns.forEach(function (b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      // Show/hide books
+      bookCards.forEach(function (card) {
+        if (category === 'all' || card.getAttribute('data-book-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Set "All" as active by default
+  categoryBtns[0].classList.add('active');
+});
+</script>
 </body>
 </html>

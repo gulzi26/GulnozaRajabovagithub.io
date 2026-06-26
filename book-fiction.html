@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Reader — Book Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.book-detail-page { padding: 40px 20px; }
+.book-detail-header { max-width: 800px; margin: 0 auto 40px; }
+.book-detail-image { width: 100%; max-width: 400px; height: 300px; background: #f0f0f0; border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
+.book-detail-meta { display: flex; gap: 20px; margin: 20px 0; font-size: 14px; color: #666; }
+.book-detail-body { max-width: 800px; margin: 0 auto; }
+.comments-section { max-width: 800px; margin: 60px auto 0; padding-top: 40px; border-top: 1px solid #e0e0e0; }
+.comments-section h3 { margin-bottom: 30px; }
+.comment-form { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+.comment-form input, .comment-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+.comment-form textarea { resize: vertical; min-height: 100px; }
+.comment-form button { background: #333; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+.comment-form button:hover { background: #555; }
+.comment { margin-bottom: 25px; padding: 15px; background: white; border-left: 3px solid #007bff; }
+.comment-author { font-weight: 600; margin-bottom: 5px; }
+.comment-date { font-size: 12px; color: #999; margin-bottom: 10px; }
+.comment-text { line-height: 1.6; }
+.back-link { display: inline-block; margin-bottom: 20px; color: #007bff; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="page-edge"></div>
+
+<header class="site-header">
+  <a href="index.html" class="wordmark">In the Margins</a>
+  <nav class="main-nav">
+    <a href="index.html#shelves">Shelves</a>
+    <a href="bookshelf.html">Book Exchange</a>
+    <a href="guestbook.html">Guestbook</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main class="book-detail-page">
+
+  <a href="bookshelf.html" class="back-link">← Back to Book Exchange</a>
+
+  <div class="book-detail-header">
+    <div class="book-detail-image">
+      <img src="https://via.placeholder.com/300x400" alt="The Reader book cover">
+    </div>
+    
+    <h1>The Reader</h1>
+    <p class="book-author">by Bernhard Schlink</p>
+    
+    <div class="book-detail-meta">
+      <span>📘 Status: Finished — Happy to discuss</span>
+      <span>🕐 Read during: MA studies</span>
+    </div>
+
+    <p><strong>About this book:</strong> A powerful story about guilt, memory, and the weight of the past. It challenges how we think about morality and human connection.</p>
+  </div>
+
+  <div class="book-detail-body">
+    <h3>My thoughts</h3>
+    <p>Read this during my MA and couldn't stop thinking about how it handles guilt and silence. The way Schlink explores the relationship between a young man and an older woman through the lens of history is haunting. I found myself questioning what forgiveness really means and whether understanding the past requires forgiving it.</p>
+
+    <p>The structure of the book — switching between past and present, between what's revealed and what's hidden — mirrors how memory works. Would genuinely love to discuss the ending with someone else who's read it.</p>
+
+    <h3>Perfect for</h3>
+    <ul>
+      <li>Readers interested in historical fiction</li>
+      <li>Discussions about morality and responsibility</li>
+      <li>Those who enjoy character-driven narratives</li>
+      <li>Literature students and book clubs</li>
+    </ul>
+  </div>
+
+  <section class="comments-section">
+    <h3>💬 Discussion</h3>
+    
+    <!-- Giscus Comments -->
+    <script src="https://giscus.app/client.js"
+            data-repo="gulzi26/GulnozaRajabovagithub.io"
+            data-repo-id="REPLACE_WITH_YOUR_REPO_ID"
+            data-category="Book-Discussions"
+            data-category-id="REPLACE_WITH_YOUR_CATEGORY_ID"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>In the Margins — written by Gulnoza Rajabova.</p>
+</footer>
+
+</body>
+</html>

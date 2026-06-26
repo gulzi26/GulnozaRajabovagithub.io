@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedagogy of the Oppressed — Book Exchange</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.book-detail-page { padding: 40px 20px; }
+.book-detail-header { max-width: 800px; margin: 0 auto 40px; }
+.book-detail-image { width: 100%; max-width: 400px; height: 300px; background: #f0f0f0; border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
+.book-detail-meta { display: flex; gap: 20px; margin: 20px 0; font-size: 14px; color: #666; }
+.book-detail-body { max-width: 800px; margin: 0 auto; }
+.comments-section { max-width: 800px; margin: 60px auto 0; padding-top: 40px; border-top: 1px solid #e0e0e0; }
+.comments-section h3 { margin-bottom: 30px; }
+.comment-form { background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+.comment-form input, .comment-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+.comment-form textarea { resize: vertical; min-height: 100px; }
+.comment-form button { background: #333; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+.comment-form button:hover { background: #555; }
+.comment { margin-bottom: 25px; padding: 15px; background: white; border-left: 3px solid #ffc107; }
+.comment-author { font-weight: 600; margin-bottom: 5px; }
+.comment-date { font-size: 12px; color: #999; margin-bottom: 10px; }
+.comment-text { line-height: 1.6; }
+.back-link { display: inline-block; margin-bottom: 20px; color: #007bff; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="page-edge"></div>
+
+<header class="site-header">
+  <a href="index.html" class="wordmark">In the Margins</a>
+  <nav class="main-nav">
+    <a href="index.html#shelves">Shelves</a>
+    <a href="bookshelf.html">Book Exchange</a>
+    <a href="guestbook.html">Guestbook</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main class="book-detail-page">
+
+  <a href="bookshelf.html" class="back-link">← Back to Book Exchange</a>
+
+  <div class="book-detail-header">
+    <div class="book-detail-image">
+      <img src="https://via.placeholder.com/300x400" alt="Pedagogy of the Oppressed book cover">
+    </div>
+    
+    <h1>Pedagogy of the Oppressed</h1>
+    <p class="book-author">by Paulo Freire</p>
+    
+    <div class="book-detail-meta">
+      <span>📙 Status: Looking for a copy</span>
+      <span>🔍 Help me find it!</span>
+    </div>
+
+    <p><strong>About this book:</strong> A foundational text on critical pedagogy and education as a practice of freedom. Freire argues that education should empower learners rather than treat them as empty vessels to be filled.</p>
+  </div>
+
+  <div class="book-detail-body">
+    <h3>Why I need this book</h3>
+    <p>Came up constantly in my Education and Innovation coursework and I never got my own copy. Every time I revisit my notes, I realize how much Freire's ideas shaped my thinking about what teaching should be. If you have one to lend or swap, I'm genuinely interested.</p>
+
+    <p>I want to reread it now with my own teaching experience behind me. I'm curious how it will resonate differently after several years in the classroom, and how I can apply his concepts more intentionally with my students.</p>
+
+    <h3>Why this book matters</h3>
+    <ul>
+      <li>Challenges traditional banking models of education</li>
+      <li>Emphasizes dialogue and mutual respect in teaching</li>
+      <li>Connects education to social justice and liberation</li>
+      <li>Foundational for critical pedagogy and transformative education</li>
+    </ul>
+
+    <h3>Perfect for</h3>
+    <ul>
+      <li>Education students and professionals</li>
+      <li>Those interested in social justice</li>
+      <li>Teachers seeking philosophical frameworks</li>
+      <li>Book clubs focused on education or activism</li>
+    </ul>
+  </div>
+
+  <section class="comments-section">
+    <h3>💬 Let's talk or swap!</h3>
+    
+    <!-- Giscus Comments -->
+    <script src="https://giscus.app/client.js"
+            data-repo="gulzi26/GulnozaRajabovagithub.io"
+            data-repo-id="REPLACE_WITH_YOUR_REPO_ID"
+            data-category="Book-Discussions"
+            data-category-id="REPLACE_WITH_YOUR_CATEGORY_ID"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="light"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>In the Margins — written by Gulnoza Rajabova.</p>
+</footer>
+
+</body>
+</html>
