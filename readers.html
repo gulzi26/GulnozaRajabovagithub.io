@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet readers, browse their e-book shelves, and share your own reader profile.">
+  <title>Readers Near You — In the Margins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="readers.css">
+  <script src="readers.js" defer></script>
+</head>
+<body>
+  <div class="page-edge" aria-hidden="true"></div>
+  <header class="site-header">
+    <a href="index.html" class="wordmark">In the Margins</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#shelves">Shelves</a>
+      <a href="bookshelf.html">Book Exchange</a>
+      <a href="readers.html" aria-current="page">Readers Near You</a>
+      <a href="guestbook.html">Guestbook</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="readers-page">
+    <section class="readers-intro">
+      <p class="hero-eyebrow">a little reading community</p>
+      <h1 class="readers-title">Readers <span class="mark-pink">near you.</span></h1>
+      <p class="readers-lede">Meet fellow readers, see the books on their shelves, and share your own electronic books with the community.</p>
+    </section>
+
+    <aside class="readers-notice" aria-label="Storage information">
+      <strong>How this demo works:</strong> profiles and book files are saved in this browser on this device. This static website has no account system or shared server, so other visitors and devices cannot see your entries. Don't upload private or copyrighted files unless you have permission to share them.
+    </aside>
+
+    <section class="reader-editor" aria-labelledby="profile-form-title">
+      <div class="readers-section-heading">
+        <div>
+          <p class="readers-kicker">your corner of the shelf</p>
+          <h2 id="profile-form-title">Create your reader profile</h2>
+        </div>
+      </div>
+      <form id="reader-form" class="reader-form">
+        <div class="reader-form-grid">
+          <label>Display name <input id="reader-name" name="name" type="text" maxlength="60" autocomplete="name" required placeholder="e.g. Alex Morgan"></label>
+          <label>City or area <input id="reader-location" name="location" type="text" maxlength="80" autocomplete="address-level2" placeholder="e.g. Tashkent"></label>
+          <label class="reader-wide">A little about you <textarea id="reader-bio" name="bio" maxlength="240" rows="3" placeholder="What do you like to read?"></textarea></label>
+          <label class="reader-wide">Profile picture <input id="reader-photo" name="photo" type="file" accept="image/png,image/jpeg,image/webp"><span class="field-hint">Optional. JPG, PNG, or WebP; up to 2 MB.</span></label>
+        </div>
+        <div class="reader-form-actions">
+          <button type="submit" class="btn-primary" id="save-profile-button">Save profile</button>
+          <button type="button" class="reader-cancel" id="cancel-edit" hidden>Cancel edit</button>
+          <span id="profile-feedback" class="reader-feedback" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <section class="reader-editor book-uploader" aria-labelledby="upload-title">
+      <div class="readers-section-heading">
+        <div>
+          <p class="readers-kicker">grow your bookshelf</p>
+          <h2 id="upload-title">Upload an e-book</h2>
+          <p class="readers-help">Save an electronic book to your profile so it appears beside your picture in the reader directory.</p>
+        </div>
+      </div>
+      <form id="book-form" class="reader-form">
+        <div class="reader-form-grid">
+          <label>Reader profile <select id="book-owner" required><option value="">Create or select your profile</option></select></label>
+          <label>Book title <input id="book-title" type="text" maxlength="100" required placeholder="Title of the book"></label>
+          <label>Author <input id="book-author" type="text" maxlength="80" placeholder="Author's name"></label>
+          <label class="reader-wide">E-book file <input id="book-file" type="file" accept=".pdf,.epub,.txt,application/pdf,application/epub+zip,text/plain" required><span class="field-hint">PDF, EPUB, or TXT; up to 10 MB. Only share files you have the right to distribute.</span></label>
+        </div>
+        <div class="reader-form-actions">
+          <button type="submit" class="btn-primary">Add to profile</button>
+          <span id="book-feedback" class="reader-feedback" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+
+    <section class="reader-directory" aria-labelledby="directory-title">
+      <div class="readers-section-heading directory-heading">
+        <div>
+          <p class="readers-kicker">turn a page, meet a reader</p>
+          <h2 id="directory-title">Readers near you</h2>
+          <p class="readers-help">Browse every profile saved in this browser and the e-books on each reader's shelf.</p>
+        </div>
+        <label class="reader-search-label">Find a reader <input id="reader-search" type="search" placeholder="Search name or city" aria-label="Search readers by name or city"></label>
+      </div>
+      <p id="directory-empty" class="directory-empty">No reader profiles yet. Create one above to be the first on the shelf.</p>
+      <div id="reader-list" class="reader-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>In the Margins — written by Gulnoza Rajabova.</p>
+    <p><a href="index.html">Back to the notebook</a></p>
+  </footer>
+</body>
+</html>
